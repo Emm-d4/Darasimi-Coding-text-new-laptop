@@ -1,0 +1,26 @@
+body{
+    /*first lesson*/
+    background-color: brown;
+}
+
+h2{
+    /*first lesson*/
+    background-color: darkolivegreen;
+
+    /*second lesson*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    /*third lesson*/
+    text-align: center;
+}
+
+p{
+    /*first lesson*/
+    background-color: beige;
+
+    /*second lesson*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    /*third lesson*/
+    text-align: center;
+}

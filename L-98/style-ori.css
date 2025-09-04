@@ -1,0 +1,106 @@
+body {
+                /* first lesson*/
+                background-color:#eeeeee ;
+            }
+
+            header {
+                /* first lesson*/
+                background-color: brown;
+            }
+
+            nav {
+                /* first lesson*/
+                background-color: aquamarine;
+            }
+
+            #intro {
+                /* first lesson*/
+                background-color: chartreuse;
+
+                /*second lesson*/
+                 font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .main-section-content h2 {
+                /* first lesson*/
+                background-color: darkgreen;
+
+                /*second lesson*/
+                 font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #bestsellers,
+            footer {
+                /* first lesson*/
+                background-color: aliceblue;   
+            }
+
+            header,
+            nav,
+            #intro,
+            #main-section,
+            #bestsellers,
+            footer {
+                /* first lesson*/
+                border: 1px solid black;
+            }
+
+            header,
+            nav,
+            #main-section {
+                /* first lesson*/
+              border-radius: 10px; 
+            }
+
+            h1 {
+                /* first lesson*/
+               color: white;
+
+               /*second lesson*/
+               font-size: 50px;
+                 font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h2,
+            p {
+                /* first lesson*/
+                color: mediumblue;
+            }
+
+            table,
+            th,
+            td {
+                /* first lesson*/
+                border: 1px solid black;
+            }
+
+            tr:last-child {
+                /* first lesson*/
+               color: olivedrab; 
+            }
+
+            span {
+                /* first lesson*/
+               color: deeppink;
+            }
+
+            footer p:first-child span {
+                /* first lesson*/
+                color: darksalmon;
+            }
+
+            .teacher-info {
+                /* first lesson*/
+                border: 1px solid;
+                border-radius: 5px;
+            }
+
+            button {
+                /*first lesson*/
+                background-color: red;
+                color: white;
+                
+                /*second lesson*/
+               font-size: 20px;
+               font-weight: bold;
+            }
