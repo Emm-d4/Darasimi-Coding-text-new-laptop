@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>basic function</title>
+    </head>
+    <body>
+        <h2>function in JS</h2>
+        <p id="add"></p>
+
+        <script>
+            function sumOfTwoNumbers() {
+                let x, y, z;
+                x = 5;
+                y = 6;
+                z = x + y;
+
+                return z;
+            }
+            let sum = sumOfTwoNumbers();
+            document.getElementById("add").innerHTML = "The total sum is " + sum;
+            </script>
+    </body>
+</html>
