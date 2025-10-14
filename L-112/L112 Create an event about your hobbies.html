@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My hobbie</title>
+
+        <style>
+            body.dark {
+            color: gold;
+            background: black;
+            }
+            button {
+                display: block;
+                margin: 5px;
+            }
+            .textEntry{
+                margin-top: 12px;
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My hobbie</h1>
+        <p id="story">
+            I like playing football with my friends.
+            </p>
+
+        <button onclick="goDark()">Get In The Mood</button>
+        
+        <div class="textEntry">
+            what games do you like?: <input type="text" id="name">
+        </div>
+
+        <button onclick ="typeAndScream()">Please, Please Don't Click Me</button>
+        <button onclick="finishTheStory()">Tell Me What Happened!</button>
+    
+        
+        <script>
+            function typeAndScream() {
+                var personName = document.getElementById("name").value;
+                alert("I told you not to do that " + personName);
+            }
+
+            function goDark() {
+                document.body.className = "dark";
+            }
+            
+            function finishTheStory() {
+                document.getElementById("story").innerHTML = "i also like playing games with my gaming friend. that is my hobbie!";
+            }
+        </script>
+    </body>
+</html>
