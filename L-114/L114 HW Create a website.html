@@ -1,0 +1,56 @@
+!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create a website</title>
+
+        <style>
+                body {
+                    text-align: center;
+                }
+
+                ul{
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background-color: lightgray;
+                }
+
+                ul li {
+                    float: left;
+                }
+
+                ul li a {
+                    display: block;
+                    color:rgb(0, 0, 0);
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                ul li a:hover {
+                    background-color: darkslategrey;
+                    color: whitesmoke;
+                }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <h2>Interesting Information</h2>
+        <img src="644372" width="250px"> <br>
+        <button onclick="tiger()">Read More</button>
+        <p id="pizza-info"></p>
+
+        <script>
+            function tiger() {
+                document.getElementById("pizza-info").innerHTML = "I like pizza because the aste is amazing even dow it is hot i still like it."; }
+        </script>
+    </body>
+</html>
