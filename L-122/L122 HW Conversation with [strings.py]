@@ -1,0 +1,5 @@
+x ="Darasimi 
+y= 10
+z = 8
+
+print(f"Hello my name is {Darasimi} and I'm {10} years old
