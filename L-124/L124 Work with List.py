@@ -5,4 +5,10 @@ print("First Element:", fruits[0])
 print("Lent Element:", fruits[-1])
 
 fruits.append('Papaya')
-print("Updated List")
+print("Updated List :", fruits)
+
+fruits.remove('Guava')
+print("Updated List :", fruits)
+
+fruits.sort()
+print("Sorted List :", fruits)
