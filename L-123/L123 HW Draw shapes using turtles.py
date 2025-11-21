@@ -27,15 +27,15 @@ pen.pendown()
 # hexagone
 angle4 = 360/6
 pen.forward(100)
-pen.left(angle4)
+pen.left(angle6)
 
 pen.forward(100)
-pen.left(angle4)
+pen.left(angle6)
 
 pen.forward(100)
-pen.left(angle4)
+pen.left(angle6)
 
 pen.forward(100)
-pen.left(angle4)
+pen.left(angle6)
 
 turtle.done()
