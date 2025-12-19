@@ -98,18 +98,18 @@ def add_contact(pb):
 			dip.append(str(input("Enter name: ")))
 		
 		if i == 1:
-			dip.append(int(input("Enter number: ")))
+			dip.append(int(input("Enter football: ")))
 
 		if i == 2:
-			dip.append(str(input("Enter e-mail address: ")))
+			dip.append(str(input("Enter team: ")))
 
 		if i == 3:
-			dip.append(str(input("Enter date of birth(dd/mm/yyy): ")))
+			dip.append(str(input("Enter location: ")))
 
 		if i == 4:
-			dip.
+			dip.append(str(input("Enter contry: ")))
 
-	pb.
+	pb.append(dip)
 
 	# And once you modify the list, you return it to the calling function wiz main, here.
 	return pb
@@ -126,7 +126,7 @@ def remove_existing(pb):
 		if query == pb[i][0]:
 			temp += 1 # Temp will be incremented & it won't be 0 anymore in this function's scope
 
-			print(pb.) # The pop function removes entry at index i
+			print(pb.pop(i)) # The pop function removes entry at index i
 			print("This query has now been removed") # printing a confirmation message after removal.
 			# This ensures that removal was successful.
 
@@ -158,42 +158,42 @@ def search_existing(pb):
 		query = str( 
 			input("Please enter the name of the contact you wish to search: ")) 
 		for i in range(len(pb)): 
-			if query == : 
-				check =  
-				temp. 
+			if query == pb[i][0]:
+				check =  i
+				temp.append(pb[i])
 				
 	elif choice == 2: 
-	# This will execute for searches based on contact number 
+	# This will execute for searches based on contact football
 		query = int( 
-			input("Please enter the number of the contact you wish to search: ")) 
+			input("Please enter the football you wish to search: ")) 
 		for i in range(len(pb)): 
-			if query ==  
-				check =  
+			if query ==  pb[i][1]:
+				check = i
 				temp.append(pb[i]) 
 				
 	elif choice == 3:
-	# This will execute for searches based on contact's e-mail address
-		query = str(input("Please enter the e-mail ID\ of the contact you wish to search: ")) 
+	# This will execute for searches based on contact team
+		query = str(input("Please enter the team you wish to search: ")) 
 		for i in range(len(pb)): 
-			if query ==  
-				check =  
+			if query ==  pb[i][2]:
+				check =  i
 				temp.append(pb[i]) 
 				
 	elif choice == 4: 
-	# This will execute for searches based on contact''s date of birth 
-		query = str(input("Please enter the DOB (in dd/mm/yyyy format ONLY)\ of the contact you wish to search: ")) 
+	# This will execute for searches based on contact's location
+		query = str(input("Please enter location you wish to search: ")) 
 		for i in range(len(pb)): 
-			if query == 
-				check =  
+			if query == pb[1][3]:
+				check = i
 				temp.append(pb[i]) 
 				
 	elif choice == 5: 
-	# This will execute for searches based on contact category 
+	# This will execute for searches based on contact ccontry
 		query = str( 
-			input("Please enter the category of the contact you wish to search: ")) 
+			input("Please enter the contry  you wish to search: ")) 
 		for i in range(len(pb)): 
-			if query ==  
-				check =  
+			if query ==  pb[i][4]:
+				check = i
 				temp.append(pb[i]) 
 		# All contacts under query category will be shown using this feature 
 		
@@ -210,7 +210,7 @@ def search_existing(pb):
 		return -1
 		# returning -1 indicates that the query did not exist in the directory 
 	else: 
-		 
+		display_all(temp)
 		return check 
 		# we're just returning a index value wiz not -1 to calling function just to notify 
 		# that the search worked successfully 
@@ -246,16 +246,16 @@ pb = initial_phonebook()
 while ch in (1, 2, 3, 4, 5): 
 	ch = menu() 
 	if ch == 1: 
-		pb =  
+		pb = add_contact(pb)
 	elif ch == 2: 
-		pb =  
+		pb = remove_existing(pb)
 	elif ch == 3: 
-		pb =  
+		pb = delete_all(pb)
 	elif ch == 4: 
-		d =  
+		d = search_existing(pb)
 		if d == -1: 
 			print("The contact does not exist. Please try again") 
-	elif ch == 5: 
-		 
+	elif ch == 5:
+		display_all(pb)
 	else: 
 		thanks()
