@@ -27,94 +27,94 @@ class RpsGame():
         self.screen = pygame.display.set_mode((960, 640))
         pygame.display.set_caption("RPS Smasher")
 
-        self.bg = pygame.image.load("L-137-138/background.jpg")
-        self.r_btn = pygame.image.load("L-137-138/r_button.png").convert_alpha()
-        self.p_btn = pygame.image.load("L-137-138/p_button.png").convert_alpha()
-        self.s_btn = pygame.image.load("L-137-138/s_button.png").convert_alpha()
+        self.bg = pygame.image.load("L137-138/background.jpg")
+        self.r_btn = pygame.image.load("L137-138/r_button.png").convert_alpha()
+        self.p_btn = pygame.image.load("L137-138/p_button.png").convert_alpha()
+        self.s_btn = pygame.image.load("L137-138/s_button.png").convert_alpha()
 
-        self.choose_rock = pygame.image.load("L-137-138/.png").convert_alpha()
-        self.choose_paper = pygame.image.load("L-137-138/.png").convert_alpha()
-        self.choose_scissors = pygame.image.load("L-137-138/.png").convert_alpha()
+        self.choose_rock = pygame.image.load("L137-138/rock.png").convert_alpha()
+        self.choose_paper = pygame.image.load("L137-138/paper.png").convert_alpha()
+        self.choose_scissors = pygame.image.load("L137-138/scissors.png").convert_alpha()
 
         self.screen.blit(self.bg, (0, 0))
-        self.screen.blit(self.r_btn, (20,500 ))
+        self.screen.blit(self.r_btn, (20, 500))
         self.screen.blit(self.p_btn, (330, 500))
-        self.screen.blit(self.s_btn, (640, ))
+        self.screen.blit(self.s_btn, (640, 500))
 
         self.rock_btn = Button(30, 520, (30, 520), 300, 140)
         self.paper_btn = Button(340, 520, (340, 520), 300, 140)
-        self.scissors_btn = (640, 520, (640, 520), 300, 140)
+        self.scissors_btn = Button(640, 520, (640, 520), 300, 140)
 
-        self.font = pygame.font.(('L-137-138/Splatch.ttf'), 90)
-        self.text = self.font.(f" ", True, (255, 255, 255))
+        self.font = pygame.font.Font(('L-137-138/Splatch.ttf'), 90)
+        self.text = self.font.render(f" ", True, (255, 255, 255))
 
-        self.pl_score = 
-        self.pc_score = 
+        self.pl_score = 0
+        self.pc_score = 0
 
     def player(self):
-        if self.rock_btn.(30):
-            self. = ""
-            self.screen.(self., (120, 200))
+        if self.rock_btn.clicked(30):
+            self.p_option = "rock"
+            self.screen.blit(self.choose_rock, (120, 200))
         
-        elif self.paper_btn.(340):
-            self.p_option = ""
-            self.screen.(self.choose_paper, (120, 200))
+        elif self.paper_btn.clicked(340):
+            self.p_option = "paper"
+            self.screen.blit(self.choose_paper, (120, 200))
 
         else:
-            self.scissors_btn.(640)
-            self.p_option = ""
-            self.screen.(self., (120, 200))
+            self.scissors_btn.clicked(640)
+            self.p_option = "scissors"
+            self.screen.blit(self.choose_scissors, (120, 200))
 
         return self.p_option
 
     def computer(self):
         self.pc_random_choice = " "
-        option = ["", "", ""]
-        pc_choice = random.(list(option))
+        option = ["rock", "paper","scissors"]
+        pc_choice = random.choice(list(option))
 
-        if pc_choice == "":
-            self. = ""
-            pc_choice = self.
+        if pc_choice == "rock":
+            self.pc_random_choice = "rock"
+            pc_choice = self.choose_rock
 
-        elif  == "":
-            self. = ""
-            pc_choice = self.
+        elif pc_choice == "paper":
+            self.pc_random_choice = "paper"
+            pc_choice = self.choose_paper
 
         else:
-            self.pc_random_choice = ""
-            pc_choice = self.
+            self.pc_random_choice = "scissors"
+            pc_choice = self.choose_scissors
 
-        pc_option = self.screen.(, (600, 200))
+        pc_option = self.screen.blit(pc_choice, (600, 200))
 
         return pc_option
 
     def pl_score_cache(self):
-        self.pl_score = 
-        self.pc_score = 
+        self.pl_score = 0
+        self.pc_score = 0
 
-        pl = self.
-        pc = self.
+        pl = self.p_option
+        pc = self.pc_random_choice
 
         if pl == "rock" and pc == "paper" or pl == "paper" and pc == "scissors" or pl == "scissors" and pc == "rock":
-            self.pc_score += 
+            self.pc_score += 1
 
-        elif pl == :
+        elif pl == pc:
             pass
 
         else:
-            self.pl_score += 
+            self.pl_score += 1
 
         return self.pl_score
 
-    def pc_score_cache():
-        self.pl_score = 
-        self.pc_score = 
+    def pc_score_cache(self):
+        self.pl_score = 0
+        self.pc_score = 0
 
-        pl = self.
-        pc = self.
+        pl = self.p_option
+        pc = self.pc_random_choice
 
         if pl == "rock" and pc == "paper" or pl == "paper" and pc == "scissors" or pl == "scissors" and pc == "rock":
-            self.pc_score += 
+            self.pc_score += 1
 
         elif pl == pc:
             pass
@@ -124,13 +124,13 @@ class RpsGame():
 
         return self.pc_score
 
-    def image_reset():
-        self.screen.(self., (330, 0))
-        self.text = self.font.(" ", True, (0, 0, 0))
-        self..blit(self.bg, (0, 0))
-        self.screen.(self.r_btn, (20, 500))
+    def image_reset(self):
+        self.screen.blit(self.text, (330, 0))
+        self.text = self.font.render(" ", True, (0, 0, 0))
+        self.screen.blit(self.bg, (0, 0))
+        self.screen.blit(self.r_btn, (20, 500))
         self.screen.blit(self.p_btn, (330, 500))
-        self..blit(self.s_btn, (640, 500))
+        self.screen.blit(self.s_btn, (640, 500))
         pass
 
     def game_loop(self):
