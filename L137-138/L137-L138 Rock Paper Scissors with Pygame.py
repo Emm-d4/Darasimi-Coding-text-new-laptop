@@ -135,28 +135,28 @@ class RpsGame():
 
     def game_loop(self):
         run = True
-        clock = pygame.time.()
-        rps_game = ()
+        clock = pygame.time.Clock()
+        rps_game = RpsGame()
 
         while run:
-            pygame.display.()
-            self.screen.(self., (330, 0))
+            pygame.display.update()
+            self.screen.blit(self.text, (330, 0))
 
-            for event in pygame.event.():
-                if event.type == pygame.:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
                     run = False
 
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if self.rock_btn.clicked(30) or self.paper_btn.(340) or self.scissors_btn.(640):
+                    if self.rock_btn.clicked(30) or self.paper_btn.clicked(340) or self.scissors_btn.clicked(640):
                         rps_game.image_reset()
                         rps_game.player()
                         rps_game.computer()
 
                         self.pl_score += rps_game.pl_score_cache()
                         self.pc_score += rps_game.pc_score_cache()
-                        self.text = self.font.(f"{self.} : {self.}", True, (255, 255, 255))
+                        self.text = self.font.render(f"{self.pl_score} : {self.pc_score}", True, (255, 255, 255))
 
-            pygame.display.()
+            pygame.display.flip()
             clock.tick(30)
 
         pygame.quit()
