@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Palindrome</title>
+    </head>
+    <body>
+        <h2>JavaScript Palindrome Checking Function</h2>
+
+        <script>
+            function Palindrome (myString){
+                // incase if any special characters or spaces are given in input that has to be removed.
+                var input = myString.replace(/^[A-Z0-9]/ig, "").toLowerCase();
+
+                // to check palindrome or not the string needs to be reversed so we are reveresed it by splitting and joining it
+
+                var reveresedInput = input.split('').reverse().join('');
+
+                //checking for palindrome
+                if (input === reveresedInput){
+                    document.write("<div>" + myString + "is a palindrome <div>");
+                }
+                else{
+                    document.write("<div>" + myString + "is not a palindrome <div>");
+                }
+            }
+
+            // invoking function
+            Palindrome("dad");
+        </script>
+    </body>
+</html>
