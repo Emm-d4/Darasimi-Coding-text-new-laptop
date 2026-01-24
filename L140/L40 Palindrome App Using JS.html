@@ -11,7 +11,7 @@
         <script>
             function Palindrome (myString){
                 // incase if any special characters or spaces are given in input that has to be removed.
-                var input = myString.replace(/^[A-Z0-9]/ig, "").toLowerCase();
+                var input = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
 
                 // to check palindrome or not the string needs to be reversed so we are reveresed it by splitting and joining it
 
