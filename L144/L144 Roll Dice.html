@@ -22,7 +22,7 @@
     </head>
     <body>
         <div>Click on the dice...</div>
-	    <div id="dice1" onclick="stopstart()"></div>
+	    <div id="dice" onclick="stopstart()"></div>
 
         <script>
             var dice;
@@ -33,7 +33,7 @@
 
             // for keep on changing the dice emojis
             function change() {
-                var random = Math.floor(math.random()*6);
+                var random = Math.floor(Math.random()*6);
                 dice.innerHTML = dices[random]; 
             }
 
@@ -51,7 +51,7 @@
 
             // invoking function
             window.onload = function() {
-                dice = document.getElementById("dice1");
+                dice = document.getElementById("dice");
                 stopstart();
             }
         </script>
