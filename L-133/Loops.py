@@ -1,15 +1,3 @@
-num = 29
-
-flag = False
-
-if num > 1:
-    # check for factors
-    for i in range(2, num):
-        if (num % i) == 0:
-            flag = True
-            break
-
-if flag:
-    print(num, "is not a prime number")
-else:
-    print(num, "is a prime number")
+# range(start_val, end_val+1, step_size)
+for i in range(0, 11, 2):
+    print(i)
