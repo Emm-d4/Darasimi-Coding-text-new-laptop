@@ -5,4 +5,4 @@ def weather_condition(): #function declaration
 x="autumn"
 y="winter"
 
-weather_condition() #call the function6
+weather_condition() #call the function
