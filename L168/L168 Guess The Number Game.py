@@ -60,4 +60,18 @@ def pick( ):
 
         except: #if a number wasn't entered
             print(f"I don't think that {enter} is a number. Sorry")
-                
+
+    if guess == number:
+        guessesTaken = str(guessesTaken)
+        print(f"Good job, {name}! You guessed my number in {guessesTaken}guesses!")
+
+    if guess != number:
+        print(f"Nope. The number I was thinking of was {number}")
+                    
+playagain="yes"
+
+while playagain=="yes" or playagain=="y" or playagain=="Yes":
+    intro()
+    pick()
+    print("Do you want to play again?")
+    playagain=input()
