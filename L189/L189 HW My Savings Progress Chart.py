@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # days holds the x-axis labels -- the days of your school week.
 # savings holds the y-axis values -- your quiz savings for each day.
 # Every savings pairs up with the day in the same position.
-days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri' 'Sat', 'Sun']
+days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 savings = [70, 85, 60, 125, 75, 150, 128]
 
 # PART 3 - PLOT YOUR FIRST LINE GRAPH
