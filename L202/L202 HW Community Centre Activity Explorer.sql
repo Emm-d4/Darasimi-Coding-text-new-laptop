@@ -10,9 +10,16 @@ CREATE TABLE IF NOT EXISTS book (
 );
 
 INSERT INTO book VALUES (1, 'Cleaning with Dad',  'activity',  9.7, 312, 2021);
-INSERT INTO book VALUES (2, 'THE garage clean up',  'Sci-Fi',  8.9, 280, 2020);
-INSERT INTO book VALUES (3, 'THE burger emergency',  'Adventure',  7.8, 195, 2022);
-INSERT INTO book VALUES (4, 'MOVING HOUSE',  'Sci-Fi',  9.5, 340, 2019);
+INSERT INTO book VALUES (2, 'THE garage clean up',  'activity',  8.9, 280, 2023);
+INSERT INTO book VALUES (3, 'THE burger emergency',  'activity',  7.8, 195, 2022);
+INSERT INTO book VALUES (4, 'MOVING HOUSE',  'activity',  9.5, 340, 2019)
+INSERT INTO book VALUES (5, 'going to the gym',  'activity',  9.7, 312, 2017);
+INSERT INTO book VALUES (6, 'Going to school',  'activity',  8.9, 280, 2010);
+INSERT INTO book VALUES (7, 'the move up day',  'activity',  7.8, 195, 2026);
+INSERT INTO book VALUES (8, '',  'activity',  9.5, 340, 2025)
+INSERT INTO book VALUES (9, 'THE burger emergency',  'activity',  7.8, 195, 2021);
+INSERT INTO book VALUES (10, 'MOVING HOUSE',  'activity',  9.5, 340, 2019)
+
 
 SELECT * FROM book;
 
