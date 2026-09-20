@@ -32,3 +32,40 @@ INSERT INTO (customer_id, cust_name, city, grade, Salesperson_id) VALUES
     ("C1007", "Brad Pitt", "New York", 100, "7004"),
     ("C1008", "Andrew Smith", "New York", 100, "7004"),
     ("C1009", "Ragnar", "New York", 100, "7004");
+
+-- Create the Orders table if it does not exist
+CREATE TABLE IF NOT EXISTS MyOrders (
+    ord_no TEXT PRIMARY KEY,
+    purch_amt REAL,
+    ord_date TEXT,
+    customer_id TEXT,
+    Salesperson_id TEXT,
+    FOREIGN KEY (customer_id) REFERENCES Cust(customer_id),
+    FOREIGN KEY (Salesperson_id) REFERENCES Salesperson(Salesperson_id)
+);
+
+-- Insert sample data into the Orders Table
+INSERT INTO MyOrders (ord_no, purch_amt, ord_date, customer_id, Salesperson_id) VALUES
+    ("P3001", 175.5, "2024-10-05", "C1005", "7002"),
+    ("P3002", 375.65, "2024-09-10", "C1001", "7001"),
+    ("P3003", 55.26, "2024-10-05", "C1002", "7003"),
+    ("P3004", 210.5, "2024-08-17", "C1009", "7007"),
+    ("P3005", 849.5, "2024-09-10", "C1005", "7005"),
+    ("P3006", 2700.6, "2024-07-27", "C1007", "7006"),
+
+-- Matching customers and salesme by city
+SELECT Cust.cust_name, Salesperson.name, Salesperson.city
+FROM Cust
+JOIN Salesperson ON Cust.city = Salesperson.city;
+
+-- Linking customers to their salesmen
+SELECT Cust.cust_name, Salesperson.name
+FROM Cust
+JOIN Salesperson ON Cust.Salesperson_id = Salesperson.Salesperson_id;
+
+--- Fetching orders where customer"s city does not match Salesperson"s city
+SELECT MyOrders.ord_no, Cust.cust_name, MyOrders.customer_id, MyOrders.Salesperson_id
+FROM MyOrders
+JOIN Cust ON MyOrders.customer_id = Cust.customer_id
+JOIN Salesperson ON MyOrders.Salesperson_id = Salesperson.Salesperson_id
+WHERE Cust.city <> Salesperson.city;
