@@ -43,24 +43,24 @@ conn.executemany("INSERT INTO Attraction VALUES (?, ?, ?)", [
 
 conn.commit()
 
-Destination = pd.read_sql("SELECT * FROM author", conn)
-Attraction = pd.read_sql("SELECT * FROM book", conn)
+Destination = pd.read_sql("SELECT * FROM Destination", conn)
+Attraction = pd.read_sql("SELECT * FROM attraction", conn)
 
-print("Author table:")
-print(authors)
+print("Destination table:")
+print(Destination)
 print()
 
-print("Book Table:")
-print(books)
+print("Attraction Table:")
+print(Attraction)
 print()
 
 # ---- PART 2: INNER JOIN ----
 
 inner = pd.read_sql(
-    "SELECT author.author_name, book.book_title " 
-    "FROM author INNER JOIN book ON author.author_id = book.author_id",
+    "SELECT Destination.Destination_name, Attraction.attraction_title " 
+    "FROM Destination INNER JOIN Attraction ON Destination.Destination_id = Destination.Destination_id",
     conn
 )
-print("INNER JOIN - author matched with their books:")
+print("INNER JOIN - Destination matched with their attraction:")
 print(inner)
 print()
