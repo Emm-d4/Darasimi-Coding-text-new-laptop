@@ -26,3 +26,5 @@ plt.hist(blood_level, bins=bins, rwidth=0.95, color=colors,
 plt.title("Blood Sugar Level Chart")
 plt.legend()
 plt.show()
+
+#test upload
