@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib. pyplot as plt
-data = pd.read_csv(r"C:\Users\famil\Desktop\Darasimi-Coding-text-new-laptop\L220\FuelComsumption.csv")
+data = pd.read_csv(r"C:\Users\famil\Desktop\Darasimi-Coding-text-new-laptop\L220")
 
 print("First 5 rows of data:")
 print(data.head())
